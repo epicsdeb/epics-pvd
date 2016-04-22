@@ -1,0 +1,29 @@
+Source: epics-pvd
+Section: libdevel
+Priority: extra
+Maintainer: Michael Davidsaver <mdavidsaver@gmail.com>
+Build-Depends: debhelper (>= 9), epics-debhelper (>= 8.14~),
+               epics-dev,
+Standards-Version: 3.9.6
+Homepage: http://epics-pvdata.sourceforge.net/
+Vcs-Git: https://github.com/epicsdeb/epics-pvd.git
+Vcs-Browser: https://github.com/epicsdeb/epics-pvd
+
+Package: epics-pvd-dev
+Architecture: any
+Depends: libpvdata5.0.0+20160318 (= ${binary:Version}),
+         ${shlibs:Depends}, ${misc:Depends},
+         ${epics:Depends},
+Description: pvData encoding/container and utility library
+ pvData is a set of data container classes and serialization format.
+ .
+ This package contains headers and libraries needed at build time.
+
+Package: libpvdata5.0.0+20160318
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+Description: pvData encoding/container and utility library
+ pvData is a set of data container classes and serialization format.
+ .
+ This package contains runtime libraries
+
